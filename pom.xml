@@ -53,11 +53,11 @@
     </dependency>
 
     <!-- Vaadin -->
-    <dependency>
-      <groupId>com.vaadin</groupId>
-      <artifactId>vaadin-spring-boot-starter</artifactId>
-      <version>${vaadin.version}</version>
-    </dependency>
+	<dependency>
+		<groupId>com.vaadin</groupId>
+		<artifactId>vaadin-spring-boot-starter</artifactId>
+		<version>24.1.4</version>
+	</dependency>
 
     <!-- DevTools (opcional para desarrollo local) -->
     <dependency>
@@ -88,6 +88,21 @@
         </configuration>
       </plugin>
 
+
+	<plugin>
+		<groupId>com.vaadin</groupId>
+		<artifactId>vaadin-maven-plugin</artifactId>
+		<version>24.1.4</version>
+		<executions>
+			<execution>
+			<goals>
+				<goal>prepare-frontend</goal>
+				<goal>build-frontend</goal>
+			</goals>
+			</execution>
+		</executions>
+	</plugin>
+	
       <!-- Spring Boot Plugin -->
       <plugin>
       <groupId>org.springframework.boot</groupId>
