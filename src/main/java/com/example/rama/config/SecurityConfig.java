@@ -14,7 +14,7 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
             .authorizeHttpRequests(auth -> auth
-                .requestMatchers("/public/**").permitAll()  // Rutas públicas
+                .requestMatcher("/public/**").permitAll()  // Rutas públicas
                 .anyRequest().authenticated()              // Todo lo demás requiere login
             )
             .oauth2Login(); // Redirección automática a Auth0

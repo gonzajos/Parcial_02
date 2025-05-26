@@ -8,7 +8,7 @@ import com.vaadin.flow.router.Route;
 import jakarta.annotation.PostConstruct;
 
 @Route(value = "")
-@PageTitle("Redireccionando...")
+@PageTitle("rama app")
 public class MainRedirectView extends VerticalLayout {
 
     @PostConstruct
